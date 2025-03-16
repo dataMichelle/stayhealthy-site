@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import doctorData from "../../data/doctors";
 import { motion } from "framer-motion";
 
@@ -38,14 +39,22 @@ export default function ReviewsPage() {
 
   return (
     <div className="mt-10 mx-auto w-4/5">
-      <motion.h1
-        className="text-3xl font-bold text-teal-600 text-center mb-12"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        Doctor Reviews
-      </motion.h1>
+      <div className="flex justify-between items-center mb-12">
+        <motion.h1
+          className="text-3xl font-bold text-teal-600 flex-grow text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          Doctor Reviews
+        </motion.h1>
+        <Link
+          href="/leave-review"
+          className="bg-teal-600 text-white py-2 px-4 rounded"
+        >
+          Leave Review
+        </Link>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {doctorData.doctors.map((doctor, index) => {
           const doctorReview = reviews[doctor.id] || {};
