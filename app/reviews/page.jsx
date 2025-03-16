@@ -74,7 +74,7 @@ export default function ReviewsPage() {
               </h2>
               <p className="text-gray-600 mb-2">{doctor.specialty}</p>
               <StarRating rating={rating} />
-              <p className="text-gray-600 italic mt-2">"{reviewText}"</p>
+              <p className="text-gray-600 italic mt-2">{`"${reviewText}"`}</p>
             </motion.div>
           );
         })}
