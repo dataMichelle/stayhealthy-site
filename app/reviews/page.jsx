@@ -53,7 +53,7 @@ export default function ReviewsPage() {
     <div className="mt-10 mx-auto w-4/5">
       <h1>Reviews</h1>
       <p className="mt-5 mb-8 text-center">
-        Read reviews from our satisfied customers.
+        Leave reviews for doctors you have seen.{" "}
       </p>
       <table className="min-w-full bg-white mt-5 border">
         <thead>
